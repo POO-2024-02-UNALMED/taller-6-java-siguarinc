@@ -4,18 +4,34 @@ import java.util.ArrayList;
 
 public class Fabricante {
     private String nombre;
-    private String pais;
-    private static ArrayList<Fabricante> listado = new ArrayList<Fabricante>();
+    private Pais pais;
+    public static ArrayList<Fabricante> listado = new ArrayList<Fabricante>();
     Fabricante(String nombre,String pais){
-        if (listado.contains(nombre)) { 
-            return;
-        } 
-        else { 
-            this.nombre=nombre;
-            this.pais=pais;
-            listado.add(this);
-        }
+        
     }
+    public Pais getPais() {
+        return pais;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public static Fabricante fabricaMayorVentas(){
+        Fabricante f = null;
+        int max = 0;
+        for(Fabricante e:listado){
+            int cont = 0;
+            for(Fabricante i:listado){
+                if (e.getNombre() == i.getNombre()) {
+                    cont++;
+                }
+            }
+            if (cont > max) {
+                max = cont;
+                f = e;
+            }
+        }
+        return f;
+        }
 }
 
 
