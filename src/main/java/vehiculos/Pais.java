@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Pais {
     private String nombre;
     public static ArrayList<Pais> listado = new ArrayList<Pais>();
-    Pais(String nombre){
+    public Pais(String nombre){
        this.nombre=nombre;
     }
     public String getNombre() {

@@ -6,7 +6,7 @@ public class Fabricante {
     private String nombre;
     private Pais pais;
     public static ArrayList<Fabricante> listado = new ArrayList<Fabricante>();
-    Fabricante(String nombre,Pais pais){
+    public Fabricante(String nombre,Pais pais){
         this.nombre=nombre;
         this.pais=pais;
     }

@@ -3,7 +3,7 @@ package vehiculos;
 public class Automovil extends Vehiculo {
     private int puestos;
     private static int cont=0;
-    Automovil( String placa,String nombre,int precio, Fabricante fabricante,int puestos){
+    public Automovil( String placa,String nombre,int precio, Fabricante fabricante,int puestos){
         super(placa,4,100,nombre,precio, "FWD",fabricante);
         this.puestos=puestos;
         cont=+1;
