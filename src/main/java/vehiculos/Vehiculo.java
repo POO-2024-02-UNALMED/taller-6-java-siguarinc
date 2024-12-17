@@ -19,7 +19,7 @@ public class Vehiculo {
         this.precio=precio;
         this.peso=peso;
         this.fabricante=fabricante;
-        CantidadVehiculos=+1;
+        CantidadVehiculos++;
         Pais.listado.add(fabricante.getPais());
         Fabricante.listado.add(fabricante);
         
