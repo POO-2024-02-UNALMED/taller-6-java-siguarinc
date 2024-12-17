@@ -5,17 +5,19 @@ public class Vehiculo {
    private int velocidadMaxima; 
    private String nombre;
    private int precio;
+   private int peso;
    private String traccion;
    Fabricante fabricante;
    int CantidadVehiculos=0;
 
-   public Vehiculo(String placa,int puertas, int velocidadMaxima,String nombre,int precio, String traccion, Fabricante fabricante){
+   public Vehiculo(String placa,int puertas, int velocidadMaxima,String nombre,int precio,int peso, String traccion, Fabricante fabricante){
         this.traccion=traccion;
         this.placa=placa;
         this.puertas=puertas;
         this.velocidadMaxima= velocidadMaxima;
         this.nombre=nombre;
         this.precio=precio;
+        this.peso=peso;
         this.fabricante=fabricante;
         CantidadVehiculos=+1;
         Pais.listado.add(fabricante.getPais());
@@ -36,6 +38,8 @@ public class Vehiculo {
    public void setNombre(String nombre) { this.nombre = nombre; } 
    public int getPrecio() { return precio; } 
    public void setPrecio(int precio) { this.precio = precio; } 
+   public int getPeso() { return peso; } 
+   public void setPeso(int peso) { this.peso = peso; } 
    public String getTraccion() { return traccion; } 
    public void setTraccion(String traccion) { this.traccion = traccion; } 
    public Fabricante getFabricante() { return fabricante; } 
