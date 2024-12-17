@@ -1,17 +1,15 @@
 package vehiculos;
 
-import java.util.ArrayList;
-
 public class Camion extends Vehiculo {
     private int ejes;
-    private static ArrayList<Camion> listado = new ArrayList<Camion>();
+    private static int contca=0;
     Camion(String placa,String nombre,int precio, Fabricante fabricante, int ejes){
         super(placa, 2,80,nombre,precio, "4X2",fabricante);
         this.ejes=ejes;
-        listado.add(this);
+        contca=+1;
     }
     public static int cantidadCamiones(){
-        return listado.size();
+        return contca;
     }
     public void setEjes(int ejes){
         this.ejes=ejes;

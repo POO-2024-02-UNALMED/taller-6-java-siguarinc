@@ -1,17 +1,15 @@
 package vehiculos;
 
-import java.util.ArrayList;
-
 public class Automovil extends Vehiculo {
     private int puestos;
-    private static ArrayList<Automovil> listado = new ArrayList<Automovil>();
+    private static int cont=0;
     Automovil( String placa,String nombre,int precio, Fabricante fabricante,int puestos){
         super(placa,4,100,nombre,precio, "FWD",fabricante);
         this.puestos=puestos;
-        listado.add(this);
+        cont=+1;
     }
     public static int cantidadAutomoviles(){
-        return listado.size();
+        return cont;
     }
 
     public void setPuestos(int puestos){
